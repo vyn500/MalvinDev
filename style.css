@@ -56,6 +56,7 @@ body {
     color: var(--accent-purple);
 }
 
+/* Desktop Nav Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -86,13 +87,14 @@ body {
     color: white;
 }
 
-/* Mobile Menu Button */
+/* Mobile Menu Toggle Button */
 .menu-toggle {
     display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
     padding: 5px;
+    z-index: 1001;
 }
 
 .menu-toggle span {
@@ -101,6 +103,439 @@ body {
     background: var(--text-main);
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+/* Mobile Menu Active State */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(5, 5, 5, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-nav {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 5rem 5% 3rem;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .bio {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        padding: 3rem 5%;
+    }
+
+    .profile-image {
+        max-width: 250px;
+        height: 350px;
+    }
+
+    .profile-border {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+    }
+
+    .profile-border-2 {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .profile-info {
+        padding: 1rem 0;
+    }
+
+    .profile-bio {
+        font-size: 0.95rem;
+    }
+
+    .profile-stats {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .stat-item {
+        min-width: 90px;
+        padding: 0.8rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .profile-social {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .social-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Timeline */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        padding-left: 50px;
+        padding-right: 0;
+        justify-content: flex-start;
+    }
+
+    .timeline-date {
+        position: absolute;
+        left: 0;
+        right: auto;
+        min-width: auto;
+        font-size: 0.85rem;
+    }
+
+    .timeline-content {
+        padding: 1.2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Grid Layouts */
+    .grid-3,
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    /* Works Page */
+    .works-header {
+        padding: 5rem 5% 2.5rem;
+    }
+
+    .works-header h1 {
+        font-size: 2rem;
+    }
+
+    .works-header p {
+        font-size: 1rem;
+    }
+
+    .works-grid {
+        padding: 1.5rem 5%;
+    }
+
+    .project-img {
+        height: 200px;
+    }
+
+    .project-info {
+        padding: 1.2rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-info p {
+        font-size: 0.85rem;
+    }
+
+    .tags span {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 2rem 5%;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 0.8rem 5%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .btn-nav {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-links {
+        top: 60px;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 4rem 5% 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        padding: 2.5rem 5%;
+    }
+
+    .profile-image {
+        max-width: 200px;
+        height: 280px;
+    }
+
+    .profile-border {
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+    }
+
+    .profile-border-2 {
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+    }
+
+    .profile-bio {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-stats {
+        gap: 0.6rem;
+    }
+
+    .stat-item {
+        min-width: 80px;
+        padding: 0.7rem 0.8rem;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .profile-social {
+        gap: 0.5rem;
+    }
+
+    .social-link {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+        margin-bottom: 2rem;
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 0.95rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Cards */
+    .card {
+        padding: 1.2rem;
+    }
+
+    .card-icon {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    /* Works Page */
+    .works-header {
+        padding: 4rem 5% 2rem;
+    }
+
+    .works-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .works-header p {
+        font-size: 0.95rem;
+    }
+
+    .project-img {
+        height: 180px;
+    }
+
+    .project-info {
+        padding: 1rem;
+    }
+
+    .project-info h3 {
+        font-size: 1rem;
+    }
+
+    .project-info p {
+        font-size: 0.8rem;
+    }
+
+    .tags span {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 5%;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
 }
 
 /* ============================================
@@ -1408,4 +1843,5 @@ input:focus {
     .cert-link {
         font-size: 0.75rem;
     }
+
 }
