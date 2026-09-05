@@ -55,13 +55,13 @@ const CONFIG = {
         type: "kursus",
         tag: "2026 - sekarang",
         title: "Timedoor Academy — AI Developer",
-        desc: "Beasiswa pemenang lomba. Pendalaman materi AI dan machine learning dengan Python."
+        desc: "Kursusnya gratis, dapat Timedoor Scholarship pemenang lomba. Pendalaman materi AI dan machine learning dengan Python."
         },
         {
         type: "kursus",
         tag: "2024",
         title: "Codero — GDevelpop",
-        desc: "Beasiswa pemenang lomba. Dasar game development dengan GDevelop."
+        desc: "Kursusnya gratis, dapat Codero Scholarship pemenang lomba. Dasar game development dengan GDevelop."
         },
         {
         type: "kursus",
