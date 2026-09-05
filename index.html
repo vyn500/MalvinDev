@@ -19,6 +19,7 @@
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#journey">Perjalanan</a></li>
                 <li><a href="#achievements">Prestasi</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
                 <li><a href="works.html" class="btn nav-cta">Karyaku</a></li>
             </ul>
             <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu">
@@ -31,8 +32,9 @@
         <a href="#about">Tentang</a>
         <a href="#journey">Perjalanan</a>
         <a href="#achievements">Prestasi</a>
+        <a href="gallery.html">Galeri</a>
         <a href="works.html">Karyaku</a>
-    </div>
+    </div>  
 
     <!-- Hero -->
     <section id="home" class="hero">
@@ -66,8 +68,13 @@
         </div>
     </section>
 
+        <!-- Gallery Strip -->
+    <a href="gallery.html" class="gallery-strip" id="gallery-strip" aria-label="Lihat galeri lengkap">
+        <div class="gallery-track" id="gallery-track"><!-- diisi lewat CONFIG.galleryStrip di script.js --></div>
+    </a>
+
     <!-- About -->
-    <section id="about" class="section about">
+    <section id="about" class="section about" style="border-bottom: none;">
         <div class="wrap">
             <div class="about-photo">
                 <div class="frame"></div>
@@ -107,9 +114,11 @@
             </div>
         </div>
     </section>
+    
 
     <!-- Skills -->
-    <section id="skills" class="section">
+    <section id="skills" class="section" style="position: relative;">
+        <img class="bg-logo bg-logo-luau" src="assets/logoLuau.png" alt="">
         <div class="wrap">
             <div class="section-head">
                 <span class="eyebrow">// kemampuan</span>
@@ -120,8 +129,10 @@
         </div>
     </section>
 
+    
+
     <!-- Journey -->
-        <section id="journey" class="section">
+        <section id="journey" class="section" style="border-bottom: none;">
         <div class="wrap">
             <div class="section-head">
                 <span class="eyebrow">// riwayat</span>
@@ -142,7 +153,8 @@
     </section>
 
     <!-- Achievements -->
-    <section id="achievements" class="section" style="border-bottom: none;">
+    <section id="achievements" class="section" style="position: relative; border-bottom: none;">
+        <img class="bg-logo bg-logo-python" src="assets/logoPython.png" alt="">
         <div class="wrap">
             <div class="section-head">
                 <span class="eyebrow">// rekam jejak</span>
