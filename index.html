@@ -3,260 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>malvinDev</title>
+    <title>malvin.dev</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">malvin<span class="highlight">.dev</span></div>
-        
-        <!-- Mobile Toggle -->
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="wrap">
+            <a href="#home" class="logo">malvin<span>.dev</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#journey">Perjalanan</a></li>
+                <li><a href="#achievements">Prestasi</a></li>
+                <li><a href="works.html" class="btn nav-cta">Karyaku</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#profile">About</a></li>
-            <li><a href="#about">History</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="works.html" class="btn-nav">My Works</a></li>
-        </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <a href="#about">Tentang</a>
+        <a href="#journey">Perjalanan</a>
+        <a href="#achievements">Prestasi</a>
+        <a href="works.html">Karyaku</a>
+    </div>
+
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content fade-in">
-            <p class="subtitle">Hi^^</p>
-            <h1>Welcome<br></h1>
-            <p class="bio">
-                haihaihaiii!!! selamat datang di websitekuu. disini aku berbagi apa yang aku pelajari dan aku buat. gaada yg perfect sih, tapi aku akan terus ngembangin ^^
-            </p>
-            <div class="cta-group">
-                <a href="#profile" class="btn btn-primary">Lanjut</a>
-                <a href="works.html" class="btn btn-outline">Lihat Karyaku!</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="circle"></div>
-            <div class="circle-2"></div>
-        </div>
-    </section>
-
-    <!-- Profile Photo Section -->
-    <section id="profile" class="profile-section">
-        <div class="container">
-            <div class="profile-container fade-in">
-                <div class="profile-image-wrapper">
-                    <div class="profile-border"></div>
-                    <div class="profile-border-2"></div>
-                    <div class="profile-image">
-                        <img src="assets/ppmM.jpeg" alt="Profile Photo">
-                    </div>
+        <div class="wrap">
+            <div class="hero-copy">
+                <span class="eyebrow">// portfolio.html</span>
+                <h1><em>W</em>elcome</h1>
+                <p class="lede">
+                    Siswa SMA yang senang otak-atik game dan Ai. Di sini adalah
+                    kumpulan apa saja yang sudah aku pelajari, apa yang sedang aku bangun,
+                    dan beberapa prestasi di sepanjang jalan.
+                </p>
+                <div class="hero-actions">
+                    <a href="works.html" class="btn btn-primary">Creations</a>
+                    <a href="#about" class="btn btn-ghost">About Me</a>
                 </div>
-                <div class="profile-info">
-                    <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Tentang <span class="highlight">Saya</span></h2>
-                    <p class="profile-bio">
-                        Aku mulai tertarik "otak atik laptop" dari kelas 4 SD. 
-                        Semua berawal dari menyukai pembuatan animasi sederhana yang dibuat dengan Pivot Animator. 
-                        Setelah itu mama menawarkan les online coding, yang membuatku tertarik adalah membuat game Minecraft dengan Code.org. 
-                        Disitulah aku mulai tertarik dengan Coding. 
-                        <br></br>
-                        Lalu aku meneruskan les online ke Scratch, HTML, Roblox Studio, dan Python yang sampai sekarang masih dalam pembelajaran. Aku lebih sering belajar otodidak, terlebih dengan Roblox Studio.
-                    </p>
-                    <div class="profile-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">15</span>
-                            <span class="stat-label">Tahun</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Project</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Bahasa Pemrograman</span>
-                        </div>
-                    </div>
-                    <div class="profile-social">
-                        <a href="https://github.com/vyn500" class="social-link">GitHub</a>
-                        <a href="https://www.instagram.com/_strvynn_/?igsh=MjFiZTRnemkybG95" class="social-link">Instagram</a>
-                        <a href="https://discordapp.com/users/starvin031" class="social-link">Discord</a>
-                        <a href="https://youtube.com/@starvin500?si=h5WcJzR5uZfQcVjg" class="social-link">YouTube</a>
-                        <a href="https://scratch.mit.edu/users/starvin102/" class="social-link">Scratch</a>
-                        <a href="https://www.roblox.com/users/2698682036/profile/" class="social-link">Roblox</a>
-                    </div>
+            </div>
+
+            <div class="terminal" aria-hidden="true">
+                <div class="terminal-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="filename">about-me.py</span>
+                </div>
+                <div class="terminal-body">
+                    <div><span class="key">def</span> malvin()<span class="punc">:</span></div>
+                    <div class="indent">role = <span class="str">"Active Student Developer"</span></div>
+                    <div class="indent">school = <span class="str">"SMA Negeri 1 Depok"</span></div>
+                    <div class="indent cursor-line">learning = <span class="str">"<span id="typewriter"></span><span class="cursor"></span>"</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About / Education Section -->
-    <section id="about" class="section bg-darker">
-        <div class="container">
-            <h2 class="section-title">Latar Belakang <span class="highlight">Pendidikan</span></h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">Sekarang</div>
-                    <div class="timeline-content">
-                        <h3>SMP Negeri 2 Depok</h3>
-                        <p>Sebentar lagi lulus, semoga masuk SMA favorit^^</p>
-                    </div>
+    <!-- About -->
+    <section id="about" class="section about">
+        <div class="wrap">
+            <div class="about-photo">
+                <div class="frame"></div>
+                <img src="assets/ppMm.jpeg" alt="Foto profil Malvin">
+            </div>
+            <div class="about-copy">
+                <span class="eyebrow">tentangku</span>
+                <h2>Mulai dari PowerPoint, berakhir di Roblox Studio dan VS Code.</h2>
+                <p>
+                    Ketertarikanku sama "otak-atik laptop" dimulai sejak kelas 4 SD.
+                    Awalnya cuma bikin game dalam PowerPoint dan animasi sederhana pakai Pivot Animator. Dari situ
+                    aku mulai coba bikin game Minecraft di Code.org, dan sejak itu aku
+                    kepincut sama coding.
+                </p>
+                <p>
+                    Belajarnya lanjut ke Scratch, HTML, Roblox Studio, dan Python yang
+                    sampai sekarang masih terus aku dalami, kebanyakan secara otodidak,
+                    terutama di Roblox Studio.
+                </p>
+                <span class="status-chip"><span class="dot-live"></span> masih mendalami AI dengan Python</span>
+
+                <div class="stat-row">
+                    <div><span class="num">15</span><span class="label">Tahun</span></div>
+                    <div><span class="num">10+</span><span class="label">Project</span></div>
+                    <div><span class="num">2</span><span class="label">Bahasa Pemrograman Utama</span></div>
                 </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
-                        <h3>Kursus di Algorithmics Indonesia</h3>
-                        <p>Mengambil kursus Python Start dan Python Pro 2. Mempelajari Python sederhana, dan dilanjut level intermediat sepereti PyGames, Pandas, dll</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2022</div>
-                    <div class="timeline-content">
-                        <h3>Kursus di Hetzek Coding</h3>
-                        <p>Belajar HTML dan CSS untuk membuat website sederhana.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2021</div>
-                    <div class="timeline-content">
-                        <h3>Empire Code Indonesia</h3>
-                        <p>Awal mula tertarik sama Roblox studio. Belajar menggunakan bahasa pemrograman LUA sederhana dan diaplikasikan di Roblox.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2021</div>
-                    <div class="timeline-content">
-                        <h3>Programmer Cilik ~Sekolah.mu</h3>
-                        <p>Awal mula tertarik sama dunia programming.</p>
-                    </div>
-                </div>
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date">2017-2023</div>
-                    <div class="timeline-content">
-                        <h3>SD Mardi Yuana Depok</h3>
-                        <p>Dari kelas 1 sampai lulus kelas 6.</p>
-                    </div>
+
+                <div class="social-row">
+                    <a href="https://id.linkedin.com/in/gilbertus-malvin-purwijaya" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/vyn500" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.instagram.com/_strvynn_/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.youtube.com/@starvin500" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://discord.com/users/866906714690158592" target="_blank" rel="noopener">Discord</a>
+                    <a href="https://www.roblox.com/users/profile?username=Starvin_500" target="_blank" rel="noopener">Roblox</a>
+                    <a href="https://scratch.mit.edu/users/Starvin102/" target="_blank" rel="noopener">Scratch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title">Pencapaian & <span class="highlight">Sertifikat</span></h2>
-            <div class="grid-3">
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥈</div>
-                    <h3 class="achievement-title">Young Coder World Cup 2025</h3>
-                    <p class="achievement-organizer">International Competition</p>
-                    <p class="achievement-organizer">Timedoor Academy</p>
-                    <p class="achievement-location">📍 Online (Global)</p>
-                    <p class="achievement-desc">
-                        Juara 2 kategori pemrograman tingkat internasional.
-                        <a href="assets/sertifikat/YCWCInter2nd.png" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
-                </div>
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">kemampuan</span>
+                <h2>Programming Skills</h2>
+                <p>Sebagian besar dipelajari otodidak, sebagian lewat kursus.</p>
+            </div>
+            <div class="skills-grid" id="skills-grid"><!-- diisi lewat CONFIG.skills di script.js --></div>
+        </div>
+    </section>
 
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥇</div>
-                    <h3 class="achievement-title">Young Coder World Cup 2025</h3>
-                    <p class="achievement-organizer">National Competition</p>
-                    <p class="achievement-organizer">EKRAF & Timedoor Academy</p>
-                    <p class="achievement-location">📍 Jakarta</p>
-                    <p class="achievement-desc">
-                        Juara 1 kategori pemrograman tingkat nasional.
-                        <a href="assets/sertifikat/YCWCNat1st.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
+    <!-- Journey -->
+        <section id="journey" class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">riwayat</span>
+                <h2>Perjalanan Belajar</h2>
+                <p>Log singkat dari kursus dan pendidikan yang membentuk diriku sekarang.</p>
+            </div>
+            <div class="buildlog-grid">
+                <div>
+                    <h3 class="buildlog-heading">Kursus</h3>
+                    <div class="buildlog" id="buildlog-kursus"></div>
                 </div>
-
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥈</div>
-                    <h3 class="achievement-title">Information Technology Creative Competition 2025</h3>
-                    <p class="achievement-organizer">National Competition</p>
-                    <p class="achievement-organizer">UDAYANA University</p>
-                    <p class="achievement-location">📍 Bali & Online</p>
-                    <p class="achievement-desc">
-                        Juara 2 kategori inovasi teknologi informasi.
-                        <a href="assets/sertifikat/ITCCUDYNNat2nd.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">⭐STORY</div>
-                    <h3 class="achievement-title">Information Technology Creative Competition 2025</h3>
-                    <p class="achievement-organizer">National Competition</p>
-                    <p class="achievement-organizer">UDAYANA University</p>
-                    <p class="achievement-location">📍 Bali & Online</p>
-                    <p class="achievement-desc">
-                        Juara Cerita Terbaik
-                        <a href="assets/sertifikat/ITCCUDYNNatBestStory.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥉</div>
-                    <h3 class="achievement-title">International Environmental Coding Competition 2025</h3>
-                    <p class="achievement-organizer">Regional Stage</p>
-                    <p class="achievement-organizer">Koding Next</p>
-                    <p class="achievement-location">📍 BSD, Jawa Barat</p>
-                    <p class="achievement-desc">
-                        Desc...
-                        <a href="assets/sertifikat/IECCReg3rd.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥇</div>
-                    <h3 class="achievement-title">Mini Scratch Competition 2025</h3>
-                    <p class="achievement-organizer">Regional Competition</p>
-                    <p class="achievement-organizer">Koding Next</p>
-                    <p class="achievement-location">📍 Online</p>
-                    <p class="achievement-desc">
-                        Desc...
-                        <a href="assets/sertifikat/MiniScratch1st.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
-                </div>
-
-                <!-- Card -->
-                <div class="card achievement-card fade-in">
-                    <div class="achievement-icon">🥇</div>
-                    <h3 class="achievement-title">Codero National Competition 2024</h3>
-                    <p class="achievement-organizer">National Competition</p>
-                    <p class="achievement-organizer">Codero</p>
-                    <p class="achievement-location">📍 Transpark Bintaro, Banten</p>
-                    <p class="achievement-desc">
-                        Desc... 
-                        <a href="assets/sertifikat/CNC24Nas1st.jpg" target="_blank" class="cert-link">Lihat Sertifikat →</a>
-                    </p>
+                <div>
+                    <h3 class="buildlog-heading">Riwayat Sekolah</h3>
+                    <div class="buildlog buildlog-white" id="buildlog-sekolah"></div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section" style="border-bottom: none;">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">rekam jejak</span>
+                <h2>Prestasi & Sertifikat</h2>
+                <p>Beberapa kompetisi yang pernah aku ikuti. Daftar ini akan terus bertambah.</p>
+            </div>
+            <div class="filter-row" id="filter-row"><!-- diisi otomatis dari kategori di CONFIG.achievements --></div>
+            <div class="achv-grid" id="achv-grid"><!-- diisi lewat CONFIG.achievements di script.js --></div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 <span class="highlight">Gilbertus Malvin Purwijaya</span>.</p>
+        <div class="wrap">
+            <p>&copy; 2026 <span class="highlight">Gilbertus Malvin Purwijaya</span></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
