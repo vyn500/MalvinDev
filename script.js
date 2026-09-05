@@ -46,7 +46,7 @@ const CONFIG = {
         type: "sekolah",           // "kursus" atau "sekolah"
         tag: "2014 — 2015",
         title: "BIMBA AIUEO",
-        desc: "Jangankan membuat coding, membaca aja masih susah."
+        desc: "Jangankan membuat coding, membaca saja aku sulit. Aku baru lancar ini "BDG.. BDG.. KMPSY""
         },
 
 
