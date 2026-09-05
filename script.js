@@ -119,6 +119,15 @@ const CONFIG = {
       //certUrl: "assets/sertifikat/example.png"
     },
     {
+      rank: "EX",
+      category: "Ai",
+      title: "#JuaraVibeCoding",
+      organizer: "Google Developer Groups",
+      location: "Online",
+      desc: "Pengalaman berpartisipasi pada event #JuaraVibeCoding dari Google Developer Groups. Membuat Web App dengan Google Ai Studio dan Google Cloud Platform.",
+      certUrl: "assets/sertifikat/GJVC.jpeg"
+    },
+    {
       rank: "silver",
       category: "Roblox Studio",
       title: "Young Coder World Cup 2025",
@@ -222,6 +231,13 @@ const CONFIG = {
       tags: ["Touch Designer", "Hand Tracking", "Mediapipe"]
     },
     {
+      title: "Hairalyze",
+      desc: "Proyek vibe coding dengan Google Ai Studio dan Google Cloud Platform. Bisa menganalisis rambut dan kulit kepala, lalu memberi saran perawatan rambut. Proyek ini dibuat untuk keperluan #JuaraVibeCoding 2026. Walau tidak lolos Top 100, ini tetap menjadi pengalaman berharga untuk belajar AI Studio dan konfiguraasi dengan Google Cloud.",
+      image: "assets/karya/GJVC.jpeg",
+      link: ["Link Demo Video", "https://www.linkedin.com/posts/gilbertus-malvin-purwijaya_juaravibecoding-jvc-activity-7466824843804499968--RhY?utm_source=li_share&utm_content=feedcontent&utm_medium=g_dt_web&utm_campaign=copy"],
+      tags: ["Ai Studio", "Google Cloud"]
+    },
+    {
       title: "Working Calculator Model",
       desc: "Mencoba membuat model kalkulator di Roblox Studio yang bisa dipakai berhitung.",
       image: "assets/karya/rblxcalc.jpeg",
@@ -313,8 +329,20 @@ const CONFIG = {
       tags: ["Python", "Game Development", "PyGame"]
     },
     // { title: "...", desc: "...", image: "...", link: "...", tags: ["..."] },
-  ]
+  ],
+  
+    // Foto strip di homepage. Tiap kolom scroll sendiri ("up" atau "down"),
+  // dan setiap gambar di sini harus unik — jangan ada yang sama di kolom lain.
+  galleryStrip: [
+    { direction: "up", images: ["assets/foto/ycwc%20(15).jpeg", "assets/foto/aq.jpeg", "assets/foto/cnc24%20(7).jpeg"] },
+    { direction: "down", images: ["assets/foto/opsi%20(2).jpeg", "assets/foto/iecc25%20(2).jpeg", "assets/foto/opsi%20(4).jpeg"] },
+    { direction: "up",   images: ["assets/foto/cnc24%20(5).jpeg", "assets/foto/opsi%20(5).jpeg", "assets/foto/ycwc%20(23).jpeg"] }
+    // { direction: "down", images: ["assets/foto/10.jpg", "..."] },
+  ],
+
 };
+
+
 
 /* ==========================================================================
    RENDERERS
@@ -352,7 +380,7 @@ function renderAchievements(filter = "Semua") {
       <p class="achv-loc">📍 ${a.location}</p>
       <p class="achv-desc">${a.desc}</p>
       ${a.certUrl ? `<a class="cert" href="${a.certUrl}" target="_blank" rel="noopener">Lihat Sertifikat →</a>` : ""}
-      ${a.linkUrl ? `<a class="link" href="${a.linkUrl}" target="_blank" rel="noopener">Lihat Live →</a>` : ""}
+      ${a.linkUrl ? `<a class="link" href="${a.linkUrl}" target="_blank" rel="noopener">Lihat Video →</a>` : ""}
     </div>
   `).join("");
 }
@@ -402,6 +430,15 @@ function renderProjects() {
         </div>
       </article>
     `;
+  }).join("");
+}
+
+function renderGalleryStrip() {
+  const el = document.getElementById("gallery-track");
+  if (!el) return;
+  el.innerHTML = CONFIG.galleryStrip.map(col => {
+    const imgs = col.images.map(src => `<img class="gcard" src="${src}" alt="">`).join("");
+    return `<div class="gcol gcol-${col.direction}"><div class="gcol-inner">${imgs}${imgs}</div></div>`;
   }).join("");
 }
 
@@ -474,4 +511,5 @@ document.addEventListener("DOMContentLoaded", () => {
   startTypewriter();
   initNav();
   initReveal();
+  renderGalleryStrip();
 });
