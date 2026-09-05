@@ -49,6 +49,12 @@ a { color: inherit; }
     padding: 0 24px;
 }
 
+.wrap-wide {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
 .eyebrow {
     font-family: var(--font-tag);
     font-size: 0.78rem;
@@ -516,6 +522,15 @@ em { font-style: italic; color: var(--purple-bright); }
     border-bottom: 1px solid var(--purple-line);
 }
 .achv-card a.cert:hover { color: var(--purple-bright); }
+.achv-card a.link {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: 0.82rem;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--purple-line);
+}
+.achv-card a.link:hover { color: var(--purple-bright); }
 
 /* ============================================
    WORKS GRID (works.html)
@@ -570,6 +585,103 @@ footer .highlight { color: var(--purple-bright); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
+   GALLERY STRIP — background-like, homepage
+   ============================================ */
+.gallery-strip {
+    position: relative;
+    display: block;
+    height: 460px;
+    overflow: hidden;
+    text-decoration: none;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+.gallery-track {
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.gcol { flex: 1; overflow: hidden; position: relative; }
+.gcol-inner { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
+
+.gcol-up .gcol-inner { animation: scrollUp 34s linear infinite; }
+.gcol-down .gcol-inner { animation: scrollDown 38s linear infinite; }
+
+@keyframes scrollUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes scrollDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+
+.gcard {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    filter: brightness(0.5) saturate(0.85);
+    transition: filter 0.35s ease, box-shadow 0.35s ease;
+}
+.gcard:hover {
+    filter: brightness(1.05) saturate(1.1);
+    box-shadow: 0 0 36px rgba(255, 255, 255, 0.719);
+}
+
+@media (max-width: 900px) {
+    .gallery-strip { height: 340px; }
+    .gcard { height: 160px; }
+    .gcol:nth-child(4) { display: none; }
+}
+@media (max-width: 560px) {
+    .gallery-strip { height: 280px; }
+    .gcard { height: 130px; }
+    .gcol:nth-child(3) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .gcol-inner { animation: none !important; }
+}
+
+/* ============================================
+   GALLERY PAGE — masonry (gallery.html)
+   ============================================ */
+.masonry { column-count: 4; column-gap: 1.2rem; }
+
+.mcard {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 1.2rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+.mcard img { width: 100%; display: block; transition: filter 0.35s ease, transform 0.35s ease; }
+.mcard::after {
+    content: "";
+    position: absolute; inset: 0;
+    box-shadow: inset 0 -90px 70px -40px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.35s ease;
+    pointer-events: none;
+}
+.mcard figcaption {
+    position: absolute;
+    left: 1.1rem; bottom: 0.9rem; right: 1.1rem;
+    color: #fff;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.mcard:hover img { filter: brightness(0.82); transform: scale(1.04); }
+.mcard:hover::after { box-shadow: inset 0 -90px 70px -40px rgba(0, 0, 0, 0.548); }
+.mcard:hover figcaption { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 1200px) { .masonry { column-count: 3; } }
+@media (max-width: 900px) { .masonry { column-count: 2; } }
+@media (max-width: 560px) { .masonry { column-count: 1; } }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 900px) {
@@ -595,4 +707,39 @@ footer .highlight { color: var(--purple-bright); }
 a:focus-visible, button:focus-visible {
     outline: 2px solid var(--purple);
     outline-offset: 3px;
+}
+
+/* ============================================
+   BACKGROUND LANGUAGE LOGOS — decorative watermark
+   ============================================ */
+.bg-logo {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+    pointer-events: none;
+    user-select: none;
+}
+
+.bg-logo-luau {
+    width: 460px;
+    right: 4%;
+    top: 0;
+    transform: translateY(-50%) rotate(7deg);
+}
+
+.bg-logo-python {
+    width: 400px;
+    left: 6%;              /* diubah dari "right" ke "left" sesuai permintaanmu barusan */
+    top: 0;
+    transform: translateY(-50%) rotate(-7deg);
+}
+
+@media (max-width: 900px) {
+    .bg-logo-luau  { width: 260px; right: -20px; }
+    .bg-logo-python { width: 230px; left: -10px; }
+}
+
+@media (max-width: 560px) {
+    .bg-logo-luau  { width: 170px; opacity: 0.07; }
+    .bg-logo-python { width: 150px; opacity: 0.07; }
 }
