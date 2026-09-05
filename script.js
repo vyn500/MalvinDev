@@ -40,13 +40,13 @@ const CONFIG = {
         type: "sekolah",           // "kursus" atau "sekolah"
         tag: "2015 — 2017",
         title: "TK Siloam Depok",
-        desc: "Masih suka nangis kalo makanannya diminta orang."
+        desc: "Belum kepikiran bikin game, karena makanan diminta orang aja masih suka nangis."
         },
         {
         type: "sekolah",           // "kursus" atau "sekolah"
         tag: "2014 — 2015",
         title: "BIMBA AIUEO",
-        desc: "BDG... BDG... KMPSY..."
+        desc: "Jangankan membuat coding, membaca aja masih susah."
         },
 
 
