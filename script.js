@@ -109,6 +109,33 @@ const CONFIG = {
   // Achievements. `rank` controls the corner badge color: "gold" | "silver" | "bronze" | "" (default purple).
   // `category` is used by the filter tabs above the grid — reuse a category string to group entries.
   achievements: [
+     {
+      rank: "silver",
+      category: "Roblox Studio",
+      title: "International Environmental Coding Competition 2026 - National Stage",
+      organizer: "Koding Next",
+      location: "Tangerang Selatan, Banten",
+      desc: "Top 2 kategori Roblox Studio tingkat regional.",
+      certUrl: "assets/sertifikat/IECC26nat.png"
+    },
+     {
+      rank: "gold",
+      category: "Roblox Studio",
+      title: "Codero National Competition 2026",
+      organizer: "Codero",
+      location: "Tangerang, Banten",
+      desc: "Juara 1 kategori Roblox Studio tingkat nasional.",
+      certUrl: "assets/sertifikat/CNC26Nas1st.jpg"
+     },
+    {
+      rank: "gold",
+      category: "Roblox Studio",
+      title: "International Environmental Coding Competition 2026 - Regional Stage",
+      organizer: "Koding Next",
+      location: "Bogor, Jawa Barat",
+      desc: "Top 1 kategori Roblox Studio tingkat regional.",
+      certUrl: "assets/sertifikat/IECC26reg.png"
+    },
     {
       rank: "silver",
       category: "Ai",
