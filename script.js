@@ -125,7 +125,7 @@ const CONFIG = {
       organizer: "Codero",
       location: "Tangerang, Banten",
       desc: "Juara 1 kategori Roblox Studio tingkat nasional.",
-      certUrl: "assets/sertifikat/CNC26Nas1st.jpg"
+      certUrl: "assets/sertifikat/CNC26Nas1st.png"
      },
     {
       rank: "gold",
