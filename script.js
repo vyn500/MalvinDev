@@ -115,7 +115,7 @@ const CONFIG = {
       title: "International Environmental Coding Competition 2026 - National Stage",
       organizer: "Koding Next",
       location: "Tangerang Selatan, Banten",
-      desc: "Top 2 kategori Roblox Studio tingkat regional.",
+      desc: "Top 2 kategori Roblox Studio tingkat nasional.",
       //certUrl: "assets/sertifikat/IECC26nat.png"
     },
      {
