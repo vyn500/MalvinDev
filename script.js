@@ -116,7 +116,7 @@ const CONFIG = {
       organizer: "Koding Next",
       location: "Tangerang Selatan, Banten",
       desc: "Top 2 kategori Roblox Studio tingkat regional.",
-      certUrl: "assets/sertifikat/IECC26nat.png"
+      //certUrl: "assets/sertifikat/IECC26nat.png"
     },
      {
       rank: "gold",
